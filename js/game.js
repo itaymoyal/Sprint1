@@ -91,8 +91,10 @@ function minesNegsCount(board) {
 function cellClicked(elCell, i, j) {
     var cell = gBoard[i][j];
     if (!cell.isShown) {
-        elCell.innerText = cell.minesAroundCount;
-        cell.isShown = true;
+        if (cell.bombElement !== MINE){
+            elCell.innerText = cell.minesAroundCount;
+            cell.isShown = true;
+        }
     }
 }
 
