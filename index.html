@@ -10,13 +10,22 @@
 
 <body onload="initGame()">
     <h1>Welcome to Minesweeper</h1>
-
+    <div class="buttons">
+        <button onclick="levelUp1()" class="button1">Beginner</button>
+        <button onclick="levelUp2()" class="button2">Medium</button>
+        <button onclick="levelUp3()" class="button3">Expert</button>
+    </div>
+    <div>
+        <button class="restart" onclick="initGame()">🤖</button>
+        <!-- <h5 class ="lives"></h5> -->
+    </div>
     <div class="board-container">
         <table class="board">
             <tbody>
-
+                
             </tbody>
         </table>
+        <label class ="timer" id="minutes">00</label>:<label class ="timer" id="seconds">00</label>
     </div>
     <p> &copy;cofferights 2021&copy;</p>
     <script src="js/utils.js"></script>
